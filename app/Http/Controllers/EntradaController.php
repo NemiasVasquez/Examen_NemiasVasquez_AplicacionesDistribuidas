@@ -12,7 +12,7 @@ class EntradaController extends Controller
     {
         $texto = trim($request->get('texto'));
 
-        $registros = Entrada::with('evento')->where('dni','LIKE','%'.$texto.'%')->paginate(5);
+        $registros = Entrada::with('evento')->where('dni','LIKE','%'.$texto.'%')->orderBy('id')->paginate(5);
 
         return view('entrada.index', compact(['registros', 'texto']));
     }

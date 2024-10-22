@@ -23,7 +23,7 @@
                 <div class="col-lg-6">
                     <div class="form-group">
                         <label for="nombre">Eventos</label>
-                        <select class="form-control" name="evento_id" id="">
+                        <select class="form-control" name="evento_id" id="evento_id">
                             @foreach($eventos as $evento)
                                 <option value="{{$evento->id}}">{{$evento->nombre}}</option>
                             @endforeach
@@ -33,7 +33,7 @@
                 <div class="col-lg-6">
                     <div class="form-group">
                         <label for="nombre">Pago</label>
-                        <input type="number" class="form-control" name="descripcion" value="{{$entrada->pago}}"
+                        <input type="text" class="form-control" name="descripcion" value="{{$entrada->pago}}"
                             placeholder="Ingrese descripción">
                     </div>
                 </div>
